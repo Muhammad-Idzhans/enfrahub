@@ -14,8 +14,10 @@ function Home() {
         const checkTheme = () => {
             setIsDark(document.documentElement.getAttribute('data-theme') === 'dark')
         }
+        // Check initial theme
         checkTheme()
 
+        // Observe for theme changes
         const observer = new MutationObserver(checkTheme)
         observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
         return () => observer.disconnect()
@@ -32,23 +34,46 @@ function Home() {
             {/* Hero Section */}
             <div className='hero-section text-center'>
                 <div className='status-badge-wrapper d-inline-flex mb-4' style={{ position: 'relative', borderRadius: '24px' }}>
-                    {isDark && <BorderBeam />}
-                    <div className='status-badge d-inline-flex align-items-center'>
-                        <div className='status-dot'></div>
-                        <span>All systems operational</span>
-                    </div>
+                    {isDark &&
+                        <BorderBeam>
+                            <div className='status-badge d-inline-flex align-items-center'>
+                                <div className='status-dot'></div>
+                                <span>All systems operational</span>
+                            </div>
+                        </BorderBeam>
+                    }
+                    {!isDark &&
+                        <div className='status-badge d-inline-flex align-items-center'>
+                            <div className='status-dot'></div>
+                            <span>All systems operational</span>
+                        </div>
+                    }
                 </div>
                 <div className='hero-content-wrapper mx-auto' style={{ position: 'relative', borderRadius: '20px' }}>
-                    {isDark && <BorderBeam />}
-                    <div className='hero-content-inner'>
-                        <h1 className='hero-title mb-3'>
-                            Everything Enfrasys, <span className='text-highlight'>in one place</span>
-                        </h1>
-                        <p className='hero-subtitle'>
-                            Access all your company applications from a single hub. No more bookmark<br />
-                            chaos — just pick an app and go.
-                        </p>
-                    </div>
+                    {isDark &&
+                        <BorderBeam>
+                            <div className='hero-content-inner'>
+                                <h1 className='hero-title mb-3'>
+                                    Everything Enfrasys, <span className='text-highlight'>in one place</span>
+                                </h1>
+                                <p className='hero-subtitle'>
+                                    Access all your company applications from a single hub. No more bookmark<br />
+                                    chaos — just pick an app and go.
+                                </p>
+                            </div>
+                        </BorderBeam>
+                    }
+                    {!isDark &&
+                        <div className='hero-content-inner'>
+                            <h1 className='hero-title mb-3'>
+                                Everything Enfrasys, <span className='text-highlight'>in one place</span>
+                            </h1>
+                            <p className='hero-subtitle'>
+                                Access all your company applications from a single hub. No more bookmark<br />
+                                chaos — just pick an app and go.
+                            </p>
+                        </div>
+                    }
                 </div>
             </div>
 
