@@ -22,7 +22,7 @@ app.use(express.json());
 app.post('/api/chat', async (req, res) => {
     try {
         const { message, conversationId } = req.body;
-        
+
         if (!message) {
             return res.status(400).json({ error: "Message is required" });
         }
@@ -65,10 +65,10 @@ app.post('/api/chat', async (req, res) => {
         });
     } catch (error) {
         console.error("Error communicating with Foundry Agent:", error);
-        
+
         // Handle basic azure credential or project errors
         let userMessage = "Sorry, I'm unable to respond right now. Please try again later.";
-        
+
         if (error.code === "PermissionDenied" || error.status === 401) {
             userMessage = "I don't have permission to access the data service. Please contact your administrator.";
         } else if (error.message?.includes("Failed to fetch") || error.message?.includes("ECONNREFUSED")) {
@@ -82,8 +82,8 @@ app.post('/api/chat', async (req, res) => {
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'dist')));
-    
-    app.get('*', (req, res) => {
+
+    app.get('/{*path}', (req, res) => {
         res.sendFile(path.join(__dirname, 'dist', 'index.html'));
     });
 }
