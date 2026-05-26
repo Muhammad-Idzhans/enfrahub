@@ -40,4 +40,4 @@ jobs:
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AFC40D20E87F4D729E808FC7FC23A8DD }}
-          package: enfrahub-uiICE_PUBLISHPROFILE_AFC40D20E87F4D729E808FC7FC23A8DD }}ICE_PUBLISHPROFILE_AFC40D20E87F4D729E808FC7FC23A8DD }}
+          package: enfrahub-ui/dist
