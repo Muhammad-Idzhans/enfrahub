@@ -1,0 +1,298 @@
+/* ==================== CHAT BOX ==================== */
+.chatbot-chat-box {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 500px;
+    z-index: 1050;
+    margin-right: 26px;
+    margin-bottom: 110px;
+    background-color: var(--bg-chat);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-chat);
+}
+
+/* Open / Closed States */
+.chat-open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.chat-closed {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    pointer-events: none;
+}
+
+/* Maximized State - Desktop */
+.chat-maximized {
+    width: 700px;
+    height: 80vh;
+    margin-right: 24px;
+    margin-bottom: 80px;
+    border-radius: 12px;
+}
+
+/* Maximized State - Mobile (full screen) */
+@media (max-width: 768px) {
+    .chatbot-chat-box {
+        width: calc(100vw - 16px);
+        height: 70vh;
+        margin-right: 8px;
+        margin-bottom: 80px;
+        border-radius: 12px;
+    }
+
+    .chat-maximized {
+        width: 100vw !important;
+        height: 100vh !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+    }
+}
+
+/* ==================== CHAT HEADER ==================== */
+.chat-header {
+    background-color: var(--accent-primary);
+    transition: background-color 0.3s ease;
+}
+
+/* ==================== CHAT MESSAGES AREA ==================== */
+.chat-messages-area {
+    background-color: var(--bg-chat);
+    transition: background-color 0.3s ease;
+}
+
+/* ==================== CHAT BUBBLES ==================== */
+.chat-bubble-assistant {
+    background-color: var(--bg-chat-bubble-assistant);
+    color: var(--text-primary);
+    border-radius: 4px 14px 14px 14px;
+    transition: var(--transition-theme);
+}
+
+.chat-bubble-user {
+    background-color: var(--bg-chat-bubble-user);
+    color: var(--text-on-primary);
+    border-radius: 14px 14px 4px 14px;
+}
+
+.chat-icon-circle {
+    background-color: var(--bg-chat-bubble-assistant);
+    transition: background-color 0.3s ease;
+}
+
+/* ==================== THINKING INDICATOR ==================== */
+.chat-thinking-bubble {
+    background-color: var(--bg-chat-bubble-assistant);
+    border-radius: 4px 14px 14px 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* ==================== CHAT INPUT ==================== */
+.chat-input-area {
+    border-top: 1px solid var(--border-light);
+    background-color: var(--bg-chat);
+    transition: var(--transition-theme);
+}
+
+.chat-input-field {
+    background-color: transparent !important;
+    color: var(--text-primary) !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.chat-input-field::placeholder {
+    color: var(--text-muted) !important;
+}
+
+.chat-input-field:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.chat-send-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.chat-send-btn:hover {
+    color: var(--accent-primary);
+}
+
+/* ==================== WELCOME MESSAGE ==================== */
+.chat-welcome-icon {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.chat-welcome-text {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+/* ==================== BACKDROP ==================== */
+.chat-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1040;
+    backdrop-filter: blur(2px);
+}
+
+/* ==================== SCROLLBAR ==================== */
+.scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* ==================== CHAT BUBBLE TEXT ==================== */
+.chat-bubble p {
+    margin: 0;
+}
+
+.chat-bubble p+p {
+    margin-top: 0.4rem;
+}
+
+.chat-bubble table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+}
+
+.chat-bubble th,
+.chat-bubble td {
+    border: 1px solid var(--border-table);
+    padding: 4px 8px;
+    text-align: left;
+}
+
+.chat-bubble th {
+    background-color: var(--bg-table-header);
+    font-weight: 600;
+}
+
+/* ==================== TYPING DOTS ==================== */
+.typing-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--text-muted);
+    animation: typingBounce 1.4s infinite ease-in-out;
+    margin: 0 2px;
+}
+
+.typing-dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+    0%,
+    80%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: translateY(-6px);
+        opacity: 1;
+    }
+}
+
+/* ==================== ANIMATIONS ==================== */
+.animate-fade-in-up {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-fade-in {
+    animation: welcomeFade 0.5s ease-out;
+}
+
+@keyframes welcomeFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==================== FAB ICON ANIMATION ==================== */
+.chat-fab-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.icon-spin-in {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.icon-spin-out {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+}
+
+/* ==================== FOCUS RESETS ==================== */
+.chatbot-chat-box input:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.chatbot-chat-box button:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}

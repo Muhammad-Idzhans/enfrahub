@@ -1,0 +1,47 @@
+[
+    {
+        "id": "etms",
+        "title": "eTMs",
+        "subtitle": "Track project-based work hours and log time spent on tasks.",
+        "icon": "ClockCircleOutlined",
+        "category": "pmo",
+        "url": "https://apps.powerapps.com/play/e/default-db992bae-4cb3-4086-8c91-55255b0c39fe/a/2bb707a7-140b-404c-9d43-dca4802c4368?source=teamsopenwebsite&screenColor=RGBA(0%2C176%2C240%2C1)&hint=a15486c0-134b-473e-8a01-e6310949367b&tenantId=db992bae-4cb3-4086-8c91-55255b0c39fe#",
+        "isActive": true
+    },
+    {
+        "id": "efins",
+        "title": "eFINs",
+        "subtitle": "Submit and track finance claims.",
+        "icon": "DollarOutlined",
+        "category": "finance",
+        "url": "https://apps.powerapps.com/play/e/default-db992bae-4cb3-4086-8c91-55255b0c39fe/a/f24906b3-57af-4c73-8408-b444a86d0d27?source=teamsopenwebsite&screenColor=RGBA(0%2C176%2C240%2C1)&hint=95eb21c6-3a09-4f57-9725-a4810f6e1770&tenantId=db992bae-4cb3-4086-8c91-55255b0c39fe",
+        "isActive": true
+    },
+    {
+        "id": "epccss",
+        "title": "ePCCSs",
+        "subtitle": "Access employee info, request exams, employment verification, and replacement leave.",
+        "icon": "IdcardOutlined",
+        "category": "pccs",
+        "url": "https://apps.powerapps.com/play/e/default-db992bae-4cb3-4086-8c91-55255b0c39fe/a/a1915443-c02c-4053-95de-f29e7c34060e?source=teamsopenwebsite&screenColor=RGBA(0%2C176%2C240%2C1)&tenantId=db992bae-4cb3-4086-8c91-55255b0c39fe",
+        "isActive": true
+    },
+    {
+        "id": "pccs-leave-calendar",
+        "title": "PCCS Leave Calendar",
+        "subtitle": "View all employee leave schedules in a visual calendar.",
+        "icon": "CalendarOutlined",
+        "category": "pccs",
+        "url": "https://app.powerbi.com/groups/me/reports/c5ac2e46-9bbe-411b-b15f-14e435e3fa3c/16cda4c96ceb58713a6c?experience=power-bi",
+        "isActive": true
+    },
+    {
+        "id": "eims",
+        "title": "eIMs",
+        "subtitle": "Manage TTG-related tasks, records, and submissions.",
+        "icon": "FileProtectOutlined",
+        "category": "ttg",
+        "url": "https://apps.powerapps.com/play/e/default-db992bae-4cb3-4086-8c91-55255b0c39fe/a/cc3ec6dc-1bf4-41d5-924e-60109bf337bf?source=teamsopenwebsite&screenColor=RGBA(0%2C176%2C240%2C1)&tenantId=db992bae-4cb3-4086-8c91-55255b0c39fe#",
+        "isActive": true
+    }
+]

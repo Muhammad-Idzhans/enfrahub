@@ -1,0 +1,293 @@
+/* ==================== HOME WRAPPER ==================== */
+.home-wrapper {
+    background-color: var(--bg-hero);
+    background-image: radial-gradient(circle at 50% -20%, var(--bg-hero-gradient-start) 0%, var(--bg-hero-gradient-end) 50%);
+    min-height: calc(100vh - 74px);
+    padding-bottom: 4rem;
+    transition: var(--transition-theme);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle ambient gradient orbs for visual depth */
+.home-wrapper::before,
+.home-wrapper::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.home-wrapper::before {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #818cf8 0%, transparent 70%);
+    top: -150px;
+    right: -100px;
+}
+
+.home-wrapper::after {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+    bottom: -100px;
+    left: -100px;
+}
+
+[data-theme='dark'] .home-wrapper::before {
+    opacity: 0.15;
+}
+
+[data-theme='dark'] .home-wrapper::after {
+    opacity: 0.1;
+}
+
+/* ==================== HERO ==================== */
+.hero-section {
+    padding: 3rem 0 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==================== BORDER BEAM WRAPPERS (Ant Design BorderBeam) ==================== */
+.status-badge-wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.status-badge {
+    position: relative;
+    z-index: 1;
+    background-color: var(--bg-status-badge);
+    padding: 6px 14px;
+    border-radius: 22px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-default);
+    backdrop-filter: blur(8px);
+    transition: var(--transition-theme);
+}
+
+.hero-content-wrapper {
+    border-radius: 20px;
+    max-width: 700px;
+    overflow: hidden;
+}
+
+.hero-content-inner {
+    position: relative;
+    z-index: 1;
+    background-color: var(--bg-hero-gradient-end);
+    border-radius: 18px;
+    padding: 2.5rem 2rem 2rem;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme='dark'] .hero-content-inner {
+    background-color: rgba(15, 23, 42, 0.9);
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #10b981;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-heading);
+    letter-spacing: -0.5px;
+    transition: color 0.3s ease;
+}
+
+.text-highlight {
+    color: var(--text-highlight);
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    transition: color 0.3s ease;
+
+}
+
+/* ==================== DROPDOWN ==================== */
+.category-dropdown {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-default);
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(8px);
+    transition: var(--transition-theme);
+}
+
+.category-dropdown:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.category-dropdown option {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+}
+
+/* ==================== GRID ==================== */
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1199px) {
+    .app-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .app-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== CARD (Glassmorphism) ==================== */
+.app-card {
+    display: block;
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--card-border-radius);
+    padding: 24px;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.2);
+    background: var(--bg-card-hover);
+}
+
+/* Link icon */
+.link-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 14px;
+    color: var(--text-muted);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    transform: translate(-2px, 2px);
+}
+
+.app-card:hover .link-icon {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.app-card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* App Icon Container */
+.app-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    background-color: var(--bg-icon-wrapper);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.app-card:hover .app-icon-wrapper {
+    transform: scale(1.08);
+}
+
+.app-icon {
+    font-size: 20px;
+    color: var(--accent-primary);
+    transition: color 0.3s ease;
+}
+
+/* Card Content */
+.app-title {
+    color: var(--text-heading);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    transition: color 0.3s ease;
+}
+
+.app-subtitle {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+/* Category Badge */
+.category-badge {
+    display: inline-block;
+    width: fit-content;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    transition: var(--transition-theme);
+}
+
+/* ==================== FILTER SECTION ==================== */
+.filter-title {
+    color: var(--text-heading);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.filter-subtitle {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "pmo",
+        "label": "PMO",
+        "color": "#1890ff"
+    },
+    {
+        "id": "finance",
+        "label": "Finance",
+        "color": "#52c41a"
+    },
+    {
+        "id": "pccs",
+        "label": "PCCS",
+        "color": "#13c2c2"
+    },
+    {
+        "id": "ttg",
+        "label": "TTG",
+        "color": "#f5222d"
+    }
+]
