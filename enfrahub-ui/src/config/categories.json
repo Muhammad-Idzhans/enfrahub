@@ -18,5 +18,15 @@
         "id": "ttg",
         "label": "TTG",
         "color": "#f5222d"
+    },
+    {
+        "id": "procurement",
+        "label": "Procurement",
+        "color": "#fa8c16"
+    },
+    {
+        "id": "compliance",
+        "label": "Legal & Compliance",
+        "color": "#722ed1"
     }
 ]

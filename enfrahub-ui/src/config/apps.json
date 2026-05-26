@@ -38,10 +38,37 @@
     {
         "id": "eims",
         "title": "eIMs",
-        "subtitle": "Manage TTG-related tasks, records, and submissions.",
+        "subtitle": "Submit IT service requests, track asset loans, and manage feedback.",
         "icon": "FileProtectOutlined",
         "category": "ttg",
         "url": "https://apps.powerapps.com/play/e/default-db992bae-4cb3-4086-8c91-55255b0c39fe/a/cc3ec6dc-1bf4-41d5-924e-60109bf337bf?source=teamsopenwebsite&screenColor=RGBA(0%2C176%2C240%2C1)&tenantId=db992bae-4cb3-4086-8c91-55255b0c39fe#",
+        "isActive": true
+    },
+    {
+        "id": "eirfs",
+        "title": "eIRFs",
+        "subtitle": "Submit purchase requests, track budget approvals, and view procurement history.",
+        "icon": "ShoppingCartOutlined",
+        "category": "procurement",
+        "url": "https://apps.powerapps.com/play/e/default-db992bae-4cb3-4086-8c91-55255b0c39fe/a/8c921d0c-f1f6-4cca-bd9a-08f498b5163e?source=teamsopenwebsite&screenColor=RGBA(0%2C176%2C240%2C1)&hint=fb2037d7-201c-418a-8d30-fd6ee31a3068&tenantId=db992bae-4cb3-4086-8c91-55255b0c39fe",
+        "isActive": true
+    },
+    {
+        "id": "whistleblowing",
+        "title": "Whistleblowing Form",
+        "subtitle": "Report misconduct, unethical behavior, bribery, corruption, or policy violations confidentially.",
+        "icon": "AlertOutlined",
+        "category": "compliance",
+        "url": "https://forms.office.com/pages/responsepage.aspx?id=riuZ27NMhkCMkVUlWww5_pxyORXfIdxDmq6NFLEUwO1UNVdQNVFQN0JIM1RUWVJVNEI3NldWTEY1Si4u&route=shorturl",
+        "isActive": true
+    },
+    {
+        "id": "contract-review",
+        "title": "Contract Review/Drafting",
+        "subtitle": "Submit contract review or drafting requests to the Legal & Compliance Department.",
+        "icon": "AuditOutlined",
+        "category": "compliance",
+        "url": "https://forms.office.com/pages/responsepage.aspx?id=riuZ27NMhkCMkVUlWww5_iBxHXydMaFEl1ibVc9wp5dUQjhWQVlRSE5TS1YxS0U4SlBBNDJTN1gyTy4u&route=shorturl",
         "isActive": true
     }
 ]
