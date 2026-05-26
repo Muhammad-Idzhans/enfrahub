@@ -35,15 +35,9 @@ jobs:
       - name: Build Vite App
         run: npm run build
 
-      - name: Prune dev dependencies
-        run: npm prune --production
-
-      - name: Zip package for deployment
-        run: zip -r ../release.zip .
-
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AFC40D20E87F4D729E808FC7FC23A8DD }}
-          package: release.zip
+          package: enfrahub-uiICE_PUBLISHPROFILE_AFC40D20E87F4D729E808FC7FC23A8DD }}ICE_PUBLISHPROFILE_AFC40D20E87F4D729E808FC7FC23A8DD }}
