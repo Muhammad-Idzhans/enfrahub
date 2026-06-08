@@ -27,15 +27,6 @@
         "isActive": true
     },
     {
-        "id": "pccs-leave-calendar",
-        "title": "PCCS Leave Calendar",
-        "subtitle": "View all employee leave schedules in a visual calendar.",
-        "icon": "CalendarOutlined",
-        "category": "pccs",
-        "url": "https://app.powerbi.com/groups/me/reports/c5ac2e46-9bbe-411b-b15f-14e435e3fa3c/16cda4c96ceb58713a6c?experience=power-bi",
-        "isActive": true
-    },
-    {
         "id": "eims",
         "title": "eIMs",
         "subtitle": "Submit IT service requests, track asset loans, and manage feedback.",
@@ -54,6 +45,15 @@
         "isActive": true
     },
     {
+        "id": "pccs-leave-calendar",
+        "title": "PCCS Leave Calendar",
+        "subtitle": "View all employee leave schedules in a visual calendar.",
+        "icon": "CalendarOutlined",
+        "category": "pccs",
+        "url": "https://app.powerbi.com/groups/me/reports/c5ac2e46-9bbe-411b-b15f-14e435e3fa3c/16cda4c96ceb58713a6c?experience=power-bi",
+        "isActive": true
+    },
+    {
         "id": "whistleblowing",
         "title": "Whistleblowing Form",
         "subtitle": "Report misconduct, unethical behavior, bribery, corruption, or policy violations confidentially.",
@@ -69,6 +69,24 @@
         "icon": "AuditOutlined",
         "category": "compliance",
         "url": "https://forms.office.com/pages/responsepage.aspx?id=riuZ27NMhkCMkVUlWww5_iBxHXydMaFEl1ibVc9wp5dUQjhWQVlRSE5TS1YxS0U4SlBBNDJTN1gyTy4u&route=shorturl",
+        "isActive": true
+    },
+    {
+        "id": "org-chart",
+        "title": "Organization Chart",
+        "subtitle": "View the latest Enfrasys organizational structure and reporting lines.",
+        "icon": "ApartmentOutlined",
+        "category": "pccs",
+        "url": "https://enfrasysconsulting.sharepoint.com/sites/Enfrasys-Family/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FEnfrasys%2DFamily%2FShared%20Documents%2FPeople%2C%20Culture%20and%20Corporate%20Services%2FEnfrasys%20Operations%20Chart%5F18052026%2Epdf&parent=%2Fsites%2FEnfrasys%2DFamily%2FShared%20Documents%2FPeople%2C%20Culture%20and%20Corporate%20Services",
+        "isActive": true
+    },
+    {
+        "id": "name-card",
+        "title": "Business Name Card",
+        "subtitle": "View your business card and search for colleagues' business card as well.",
+        "icon": "IdcardOutlined",
+        "category": "pccs",
+        "url": "https://apps.powerapps.com/play/e/default-db992bae-4cb3-4086-8c91-55255b0c39fe/a/21a23b6a-781d-40c3-b0d4-a2f11bf895d4?source=teamsopenwebsite&screenColor=RGBA(0%2C176%2C240%2C1)&hint=6777611c-137b-4be3-8e05-4031b0e1034b&tenantId=db992bae-4cb3-4086-8c91-55255b0c39fe",
         "isActive": true
     }
 ]

@@ -104,13 +104,13 @@ function Home() {
                 </div>
 
                 {/* App Cards Grid */}
-                <div className='app-grid'>
-                    {filteredApps.map(app => {
+                <div className='app-grid' key={selectedCategory}>
+                    {filteredApps.map((app, index) => {
                         const category = categories.find(cat => cat.id === app.category)
                         const IconComponent = AntIcons[app.icon]
 
                         return (
-                            <a key={app.id} href={app.url} target='_blank' rel='noopener noreferrer' className='app-card'>
+                            <a key={app.id} href={app.url} target='_blank' rel='noopener noreferrer' className='app-card' style={{ '--card-index': index }}>
                                 <span className='link-icon'>
                                     <span className='bi bi-box-arrow-up-right'></span>
                                 </span>
