@@ -9,7 +9,7 @@ function App() {
     <div>
       <Header />
       <Home />
-      <ChatBot />
+      {/* <ChatBot /> */}
     </div>
   )
 }
