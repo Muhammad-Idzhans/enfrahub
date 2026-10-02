@@ -7,7 +7,6 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_WEBAPP_NAME: enfrahub
   NODE_VERSION: "22.x"
 
 jobs:
@@ -35,9 +34,17 @@ jobs:
       - name: Build Vite App
         run: npm run build
 
-      - name: Deploy to Azure Web App
+      - name: Deploy to OLD app (enfrasys tenant)
+        uses: azure/webapps-deploy@v3
+        continue-on-error: true
+        with:
+          app-name: enfrahub
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AFC40D20E87F4D729E808FC7FC23A8DD }}
+          package: enfrahub-ui
+
+      - name: Deploy to NEW app (enfrasysdemos tenant)
         uses: azure/webapps-deploy@v3
         with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AFC40D20E87F4D729E808FC7FC23A8DD }}
+          app-name: enfrahub-internal
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_ENFRAHUB_DEMO }}
           package: enfrahub-ui
